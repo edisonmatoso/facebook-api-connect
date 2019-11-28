@@ -36,7 +36,7 @@
         window.appId = new URLSearchParams(window.location.search).get("id");
 
         FB.init({
-          appId: window.appId,
+          appId: window.parent.appId || window.appId,
           xfbml: true,
           version: "v2.5"
         });
